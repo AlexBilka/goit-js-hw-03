@@ -38,15 +38,21 @@ console.log(words.join(" ")); // "JavaScript це цікаво"
 console.log(words.join("-")); // "JavaScript-це-цікаво"
 */
 
-
+/*
 function slugify(title) {
   const normalizeTitle = title.toLowerCase();
   const splitTitle = normalizeTitle.split(" ");
   const joinTitle = splitTitle.join("-");
  
   return joinTitle;
-}
+}*/
 
+function slugify(title) {
+  const normalizeTitle = title.toLowerCase();
+  const splitTitle = normalizeTitle.split(" ");
+  return splitTitle.join("-");
+ 
+}
 
 console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
 console.log(slugify("English for developer")); // "english-for-developer"
