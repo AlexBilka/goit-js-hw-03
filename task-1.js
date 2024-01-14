@@ -19,10 +19,32 @@ Slug — це завжди рядок у нижньому регістрі, сл
 
 */
 
+/*
+Метод split(delimiter) перетворює рядок в масив, «розбиваючи» його роздільником delimiter.
+Якщо роздільник - це порожній рядок, то створиться масив окремих символів. Роздільником може бути один або декілька символів.
+
+const name = "Mango";
+console.log(name.split("")); // ["M", "a", "n", "g", "o"]
+
+const message = "JavaScript - це цікаво";
+console.log(message.split(" ")); // ["JavaScript", "-", "це", "цікаво"]
+
+Метод масивів join(delimiter) об'єднує елементи масиву у рядок. У рядку елементи будуть розділені символом або групою символів,
+зазначених в delimiter. Тобто ця операція протилежна методу рядків split(delimiter).
+
+const words = ["JavaScript", "це", "цікаво"];
+console.log(words.join("")); // "JavaScriptцецікаво"
+console.log(words.join(" ")); // "JavaScript це цікаво"
+console.log(words.join("-")); // "JavaScript-це-цікаво"
+*/
+
+
 function slugify(title) {
-  normalizeTitle = title.toLowerCase();
-  
-  return slug;
+  const normalizeTitle = title.toLowerCase();
+  const splitTitle = normalizeTitle.split(" ");
+  const joinTitle = splitTitle.join("-");
+ 
+  return joinTitle;
 }
 
 
